@@ -850,7 +850,7 @@ Address - 1670/74, 6th Main Rd, Kengeri Satellite Town, Bengaluru, Karnataka 560
 
 <script>
 
-function addToCart(name,price){
+function addToCart(name, price, image) {
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -863,14 +863,15 @@ existing.qty += 1;
 }else{
 
 cart.push({
-name:name,
-price:price,
-qty:1
+name: name,
+price: price,
+qty: 1,
+image: image
 });
 
 }
 
-localStorage.setItem("cart",JSON.stringify(cart));
+localStorage.setItem("cart", JSON.stringify(cart));
 
 alert(name + " added to cart");
 
