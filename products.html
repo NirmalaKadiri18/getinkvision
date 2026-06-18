@@ -707,7 +707,7 @@ Professional hygiene products and cleaning solutions.
 
 <script>
 
-function addToCart(name,price,image){
+function addToCart(name, price, image) {
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -720,10 +720,10 @@ existing.qty += 1;
 }else{
 
 cart.push({
-name:name,
-price:price,
-image:image,
-qty:1
+name: name,
+price: price,
+qty: 1,
+image: image
 });
 
 }
