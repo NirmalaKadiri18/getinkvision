@@ -19,10 +19,20 @@ let generatedOTP = "";
 /* EMAIL CONFIG */
 
 const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
         user: "getinkvision1@gmail.com",
         pass: "ojewfhckwitgicmb"
+    }
+});
+
+transporter.verify(function (error, success) {
+    if (error) {
+        console.log("SMTP Error:", error);
+    } else {
+        console.log("SMTP Server is ready.");
     }
 });
 
