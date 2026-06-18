@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Getinkvision</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+background:linear-gradient(90deg,#1565c0,#1976d2);
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
+
+.logo-section{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-section img{
+width:55px;
+height:55px;
+background:white;
+padding:5px;
+border-radius:50%;
+object-fit:contain;
+}
+
+.logo-section h2{
+color:white;
+font-size:30px;
+font-weight:700;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+padding:10px 16px;
+border-radius:8px;
+transition:0.3s;
+font-weight:500;
+}
+
+nav a:hover{
+background:rgba(255,255,255,0.2);
+}
+
+/* HERO */
+
+.hero{
+width:90%;
+margin:50px auto;
+background:white;
+border-radius:30px;
+padding:70px;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:50px;
+align-items:center;
+box-shadow:0 8px 30px rgba(0,0,0,0.08);
+}
+
+.hero-text h1{
+font-size:64px;
+line-height:1.1;
+color:#1565c0;
+margin-bottom:22px;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.9;
+color:#555;
+margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.primary-btn{
+padding:15px 30px;
+background:linear-gradient(90deg,#1565c0,#42a5f5);
+border:none;
+border-radius:12px;
+color:white;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.primary-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(21,101,192,0.25);
+}
+
+.secondary-btn{
+padding:15px 30px;
+background:#eef4ff;
+border:none;
+border-radius:12px;
+color:#1565c0;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.secondary-btn:hover{
+background:#dbe9ff;
+}
+
+/* HERO IMAGE */
+
+.hero img{
+width:100%;
+border-radius:25px;
+}
+
+/* FEATURES */
+
+.features{
+width:90%;
+margin:80px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.feature-box{
+background:white;
+padding:35px;
+border-radius:24px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.feature-box:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+.feature-icon{
+font-size:48px;
+margin-bottom:18px;
+}
+
+.feature-box h3{
+font-size:24px;
+color:#1565c0;
+margin-bottom:12px;
+}
+
+.feature-box p{
+font-size:16px;
+line-height:1.8;
+color:#666;
+}
+
+/* PRODUCTS PREVIEW */
+
+.products-section{
+width:90%;
+margin:90px auto;
+}
+
+.section-title{
+text-align:center;
+font-size:48px;
+color:#1565c0;
+margin-bottom:20px;
+}
+
+.section-subtitle{
+text-align:center;
+font-size:18px;
+color:#666;
+max-width:750px;
+margin:auto;
+margin-bottom:50px;
+line-height:1.8;
+}
+
+/* PRODUCTS GRID */
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+background:white;
+padding:20px;
+border-radius:24px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+overflow:hidden;
+}
+
+.product-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+.product-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+border-radius:18px;
+}
+
+.product-card h3{
+font-size:24px;
+margin-top:18px;
+margin-bottom:10px;
+color:#1565c0;
+}
+
+.product-card p{
+font-size:15px;
+line-height:1.8;
+color:#666;
+margin-bottom:16px;
+}
+
+.price{
+font-size:26px;
+font-weight:700;
+margin-bottom:18px;
+}
+
+/* PRODUCT BUTTONS */
+
+.card-buttons{
+display:flex;
+gap:12px;
+}
+
+.cart-btn{
+flex:1;
+padding:12px;
+border:none;
+background:#1565c0;
+color:white;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+.cart-btn:hover{
+background:#0d47a1;
+}
+
+.buy-btn{
+flex:1;
+padding:12px;
+border:none;
+background:#2ecc71;
+color:white;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+.buy-btn:hover{
+background:#27ae60;
+}
+
+/* SERVICES */
+
+.services-section{
+width:90%;
+margin:100px auto;
+background:white;
+padding:60px;
+border-radius:30px;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+}
+
+.services-grid{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:#f5f8ff;
+padding:35px;
+border-radius:22px;
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+background:#e9f2ff;
+}
+
+.service-card h3{
+font-size:24px;
+color:#1565c0;
+margin-bottom:15px;
+}
+
+.service-card p{
+line-height:1.8;
+color:#555;
+}
+
+/* CTA */
+
+.cta-section{
+width:90%;
+margin:100px auto;
+background:linear-gradient(90deg,#1565c0,#42a5f5);
+padding:70px;
+border-radius:32px;
+text-align:center;
+color:white;
+}
+
+.cta-section h2{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.cta-section p{
+font-size:18px;
+line-height:1.9;
+max-width:800px;
+margin:auto;
+margin-bottom:35px;
+}
+
+.cta-btn{
+padding:16px 35px;
+background:white;
+color:#1565c0;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-2px);
+}
+
+/* FOOTER */
+
+footer{
+margin-top:80px;
+background:#0d47a1;
+color:white;
+padding:60px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+}
+
+.footer-grid h3{
+margin-bottom:18px;
+font-size:24px;
+}
+
+.footer-grid p,
+.footer-grid a{
+color:#ddd;
+text-decoration:none;
+line-height:2;
+font-size:15px;
+}
+
+.footer-grid a:hover{
+color:white;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.2);
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+header{
+flex-direction:column;
+gap:20px;
+padding:18px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+grid-template-columns:1fr;
+padding:40px;
+}
+
+.hero-text h1{
+font-size:46px;
+}
+
+.cta-section{
+padding:40px;
+}
+
+}
+
+@media(max-width:650px){
+
+.logo-section h2{
+font-size:22px;
+}
+
+.hero{
+padding:30px;
+}
+
+.hero-text h1{
+font-size:36px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.cta-section h2{
+font-size:36px;
+}
+
+.card-buttons{
+flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-section">
+
+<img src="images/logo.png" alt="logo">
+
+<h2>GETINKVISION</h2>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒</a>
+
+<a href="login.html" id="loginBtn">Login</a>
+
+<a href="#" id="logoutBtn" style="display:none;">Logout</a>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Smart Hygiene Starts With Nature</h1>
+
+<p>
+Getinkvision delivers premium hygiene and cleaning solutions for homes, offices, apartments, and industries with eco-friendly innovation and trusted quality.
+</p>
+
+<p>
+Explore high-performance cleaning products, professional services, and worker booking solutions all in one platform.
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn" onclick="window.location.href='products.html'">
+Shop Products
+</button>
+
+<button class="secondary-btn" onclick="window.location.href='services.html'">
+Explore Services
+</button>
+
+</div>
+
+</div>
+<div class="hero-image">
+    <img src="images/products.jpg" alt="Cleaning Products">
+</div>
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="feature-box">
+
+<div class="feature-icon">🌿</div>
+
+<h3>Eco Friendly</h3>
+
+<p>
+Safe and environmentally responsible hygiene solutions for everyday use.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<div class="feature-icon">⚡</div>
+
+<h3>Fast Delivery</h3>
+
+<p>
+Quick delivery and reliable service support across locations.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<div class="feature-icon">🧪</div>
+
+<h3>Trusted Quality</h3>
+
+<p>
+Professionally tested products designed for maximum cleanliness.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<div class="feature-icon">💳</div>
+
+<h3>Secure Payments</h3>
+
+<p>
+Safe payment options including UPI, QR, Card, and Cash on Delivery.
+</p>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products-section">
+
+<h1 class="section-title">Popular Products</h1>
+
+<p class="section-subtitle">
+Premium hygiene products trusted by homes, offices, and industries.
+</p>
+
+<div class="products-grid">
+
+<!-- PRODUCT -->
+
+<div class="product-card">
+
+<img src="images/handwash.jpg">
+
+<h3>Hand Wash</h3>
+
+<p>
+Kills 99.9% germs and keeps your hands fresh and protected.
+</p>
+
+<div class="price">₹150</div>
+
+<div class="card-buttons">
+
+<button class="cart-btn" onclick="addToCart('Hand Wash',150)">
+Add to Cart
+</button>
+
+<button class="buy-btn" onclick="window.location.href='payment.html'">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+<!-- PRODUCT -->
+
+<div class="product-card">
+
+<img src="images/toilet-cleaner.jpg">
+
+<h3>Toilet Cleaner</h3>
+
+<p>
+Strong stain removal and long-lasting freshness for bathrooms.
+</p>
+
+<div class="price">₹220</div>
+
+<div class="card-buttons">
+
+<button class="cart-btn" onclick="addToCart('Toilet Cleaner',220)">
+Add to Cart
+</button>
+
+<button class="buy-btn" onclick="window.location.href='payment.html'">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+<!-- PRODUCT -->
+
+<div class="product-card">
+
+<img src="images/sanitizer.jpg">
+
+<h3>Hand Sanitizer</h3>
+
+<p>
+Instant protection against germs with moisturizing formula.
+</p>
+
+<div class="price">₹140</div>
+
+<div class="card-buttons">
+
+<button class="cart-btn" onclick="addToCart('Hand Sanitizer',140)">
+Add to Cart
+</button>
+
+<button class="buy-btn" onclick="window.location.href='payment.html'">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services-section">
+
+<h1 class="section-title">Professional Services</h1>
+
+<p class="section-subtitle">
+Book trusted cleaning and hygiene support services with Getinkvision.
+</p>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<h3>🧼 Home Cleaning</h3>
+
+<p>
+Deep cleaning solutions for apartments, villas, and homes.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>🏢 Office Cleaning</h3>
+
+<p>
+Professional workplace hygiene and sanitation services.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>🚚 House Shifting</h3>
+
+<p>
+Safe packing, moving, and transportation services.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>👷 Worker Booking</h3>
+
+<p>
+Book trained workers for cleaning and maintenance anytime.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+<h2>Need Professional Hygiene Solutions?</h2>
+
+<p>
+Contact our team today for premium products, cleaning services,
+and customized hygiene support for your home or business.
+</p>
+
+<button class="cta-btn" onclick="window.location.href='contact.html'">
+
+Contact Us
+
+</button>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Getinkvision</h3>
+
+<p>
+Professional hygiene products and cleaning solutions for homes and industries.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p>Home</p>
+<p>Products</p>
+<p>Services</p>
+<p>Contact</p>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📧 info@getinkvision.org</p>
+
+<p>📞 +91 8002337353</p>
+
+<p>📍 Getinkvision Manufacturing  & Distributors Co.
+GSTIN - 29ABCFG3285A1ZL
+Address - 1670/74, 6th Main Rd, Kengeri Satellite Town, Bengaluru, Karnataka 560060</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 Getinkvision | All Rights Reserved
+
+</div>
+
+</footer>
+
+<script>
+
+function addToCart(name,price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let existing = cart.find(item => item.name === name);
+
+if(existing){
+
+existing.qty += 1;
+
+}else{
+
+cart.push({
+name:name,
+price:price,
+qty:1
+});
+
+}
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+let isLoggedIn = localStorage.getItem("loggedIn");
+
+const loginBtn = document.getElementById("loginBtn");
+const logoutBtn = document.getElementById("logoutBtn");
+
+if(isLoggedIn === "true"){
+
+loginBtn.style.display = "none";
+logoutBtn.style.display = "inline-block";
+
+}
+
+logoutBtn.onclick = function(){
+
+localStorage.removeItem("loggedIn");
+
+alert("Logged Out Successfully");
+
+window.location.reload();
+
+};
+
+</script>
+
+</body>
+</html>

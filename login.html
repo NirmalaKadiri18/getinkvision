@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OTP Login - Getinkvision</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#1565c0,#42a5f5);
+overflow:hidden;
+position:relative;
+}
+
+/* BACKGROUND SHAPES */
+
+.circle1{
+position:absolute;
+width:350px;
+height:350px;
+background:rgba(255,255,255,0.08);
+border-radius:50%;
+top:-120px;
+left:-120px;
+}
+
+.circle2{
+position:absolute;
+width:300px;
+height:300px;
+background:rgba(255,255,255,0.08);
+border-radius:50%;
+bottom:-120px;
+right:-120px;
+}
+
+/* LOGIN BOX */
+
+.login-container{
+width:950px;
+height:580px;
+background:white;
+border-radius:30px;
+overflow:hidden;
+display:grid;
+grid-template-columns:1fr 1fr;
+box-shadow:0 15px 45px rgba(0,0,0,0.25);
+position:relative;
+z-index:10;
+}
+
+/* LEFT SIDE */
+
+.left-side{
+background:linear-gradient(135deg,#0d47a1,#1976d2);
+padding:60px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.left-side img{
+width:110px;
+background:white;
+padding:10px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.left-side h1{
+font-size:50px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.left-side p{
+font-size:17px;
+line-height:1.9;
+color:#e3f2fd;
+}
+
+/* RIGHT SIDE */
+
+.right-side{
+padding:60px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.right-side h2{
+font-size:40px;
+color:#1565c0;
+margin-bottom:10px;
+}
+
+.right-side p{
+color:#666;
+margin-bottom:35px;
+}
+
+/* INPUT BOX */
+
+.input-box{
+margin-bottom:22px;
+}
+
+.input-box label{
+display:block;
+margin-bottom:8px;
+font-weight:500;
+color:#333;
+}
+
+.input-box input{
+width:100%;
+padding:15px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:16px;
+outline:none;
+transition:0.3s;
+}
+
+.input-box input:focus{
+border-color:#1565c0;
+box-shadow:0 0 0 4px rgba(21,101,192,0.1);
+}
+
+/* BUTTONS */
+
+.btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#1565c0,#42a5f5);
+color:white;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+margin-top:10px;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(21,101,192,0.3);
+}
+
+/* MESSAGE */
+
+#message{
+margin-top:20px;
+font-size:15px;
+font-weight:500;
+color:#1565c0;
+text-align:center;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.login-container{
+width:95%;
+height:auto;
+grid-template-columns:1fr;
+}
+
+.left-side{
+display:none;
+}
+
+.right-side{
+padding:40px 30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle1"></div>
+<div class="circle2"></div>
+
+<div class="login-container">
+
+<!-- LEFT -->
+
+<div class="left-side">
+
+<img src="images/logo.png" alt="logo">
+
+<h1>Getinkvision OTP Login</h1>
+
+<p>
+Securely login using Email OTP verification.
+Quick, safe, and easy access to your hygiene
+products and service bookings.
+</p>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="right-side">
+
+<h2>OTP Login</h2>
+
+<p>
+Enter your email to receive a One-Time Password
+</p>
+
+<!-- EMAIL -->
+
+<div class="input-box">
+
+<label>Email Address</label>
+
+<input type="email" id="email" placeholder="Enter your email">
+
+</div>
+
+<button class="btn" onclick="sendOTP()">
+Send OTP
+</button>
+
+<!-- OTP -->
+
+<div class="input-box" style="margin-top:25px;">
+
+<label>Enter OTP</label>
+
+<input type="text" id="otp" placeholder="Enter OTP">
+
+</div>
+
+<button class="btn" onclick="verifyOTP()">
+Verify OTP
+</button>
+
+<p id="message"></p>
+
+</div>
+
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

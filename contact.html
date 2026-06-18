@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - Getinkvision</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+background:linear-gradient(90deg,#1565c0,#1976d2);
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
+
+.logo-section{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-section img{
+width:55px;
+height:55px;
+background:white;
+padding:5px;
+border-radius:50%;
+object-fit:contain;
+}
+
+.logo-section h2{
+color:white;
+font-size:30px;
+font-weight:700;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+gap:15px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+padding:10px 16px;
+border-radius:8px;
+transition:0.3s;
+font-weight:500;
+}
+
+nav a:hover{
+background:rgba(255,255,255,0.2);
+}
+
+/* HERO */
+
+.hero{
+width:90%;
+margin:50px auto;
+background:white;
+border-radius:28px;
+padding:60px;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:50px;
+align-items:center;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+}
+
+.hero-text h1{
+font-size:58px;
+line-height:1.1;
+color:#1565c0;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+color:#555;
+margin-bottom:25px;
+}
+
+.hero img{
+width:100%;
+border-radius:20px;
+}
+
+/* CONTACT SECTION */
+
+.contact-container{
+width:90%;
+margin:70px auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* LEFT */
+
+.contact-info{
+background:white;
+padding:45px;
+border-radius:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-info h2{
+font-size:38px;
+color:#1565c0;
+margin-bottom:20px;
+}
+
+.contact-info p{
+font-size:17px;
+line-height:1.9;
+color:#555;
+margin-bottom:20px;
+}
+
+.info-box{
+margin-top:30px;
+}
+
+.info-item{
+display:flex;
+align-items:flex-start;
+gap:18px;
+margin-bottom:28px;
+}
+
+.info-icon{
+font-size:28px;
+background:#eef4ff;
+padding:12px;
+border-radius:12px;
+}
+
+.info-text h3{
+font-size:20px;
+margin-bottom:5px;
+color:#1565c0;
+}
+
+.info-text p{
+margin:0;
+font-size:15px;
+}
+
+/* RIGHT */
+
+.contact-form{
+background:white;
+padding:45px;
+border-radius:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form h2{
+font-size:38px;
+color:#1565c0;
+margin-bottom:25px;
+}
+
+/* FORM */
+
+.input-box{
+margin-bottom:22px;
+}
+
+.input-box label{
+display:block;
+margin-bottom:8px;
+font-weight:500;
+}
+
+.input-box input,
+.input-box textarea,
+.input-box select{
+width:100%;
+padding:16px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:16px;
+outline:none;
+transition:0.3s;
+}
+
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box select:focus{
+border-color:#1565c0;
+box-shadow:0 0 0 4px rgba(21,101,192,0.1);
+}
+
+.input-box textarea{
+height:140px;
+resize:none;
+}
+
+/* PHONE */
+
+.phone-group{
+display:flex;
+gap:15px;
+}
+
+.phone-group select{
+width:120px;
+}
+
+/* BUTTON */
+
+.send-btn{
+width:100%;
+padding:16px;
+border:none;
+background:linear-gradient(90deg,#1565c0,#42a5f5);
+color:white;
+font-size:17px;
+font-weight:600;
+border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.send-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(21,101,192,0.3);
+}
+
+/* MAP */
+
+.map-section{
+width:90%;
+margin:60px auto;
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.map-section h2{
+font-size:36px;
+color:#1565c0;
+margin-bottom:25px;
+}
+
+.map{
+width:100%;
+height:350px;
+border-radius:18px;
+overflow:hidden;
+}
+
+.map iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:80px;
+background:#0d47a1;
+color:white;
+padding:50px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:35px;
+}
+
+.footer-grid h3{
+margin-bottom:18px;
+}
+
+.footer-grid p,
+.footer-grid a{
+color:#ddd;
+text-decoration:none;
+line-height:2;
+font-size:15px;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.2);
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:20px;
+padding:18px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+grid-template-columns:1fr;
+padding:35px;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-text h1{
+font-size:34px;
+}
+
+.logo-section h2{
+font-size:22px;
+}
+
+.phone-group{
+flex-direction:column;
+}
+
+.phone-group select{
+width:100%;
+}
+
+.contact-info,
+.contact-form{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-section">
+
+<img src="images/logo.png" alt="logo">
+
+<h2>GETINKVISION</h2>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒</a>
+
+</nav>
+
+</header>
+<h1>Get In Touch With Us</h1>
+
+<p>
+Have questions about our products or services?
+Our team is here to assist you with professional support and guidance.
+</p>
+
+<p>
+We provide fast response, reliable communication,
+and dedicated customer service for all your hygiene and cleaning needs.
+</p>
+
+</div>
+
+<div class="hero-image">
+    <img src="images/contact.jpg" alt="contact">
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<div class="contact-container">
+
+<!-- LEFT -->
+
+<div class="contact-info">
+
+<h2>Contact Information</h2>
+
+<p>
+Reach out to us anytime for product inquiries,
+service bookings, partnerships, or support.
+</p>
+
+<div class="info-box">
+
+<div class="info-item">
+
+<div class="info-icon">📍</div>
+
+<div class="info-text">
+
+<h3>Address</h3>
+
+<p>Getinkvision Manufacturing  & Distributors Co.
+GSTIN - 29ABCFG3285A1ZL
+Address - 1670/74, 6th Main Rd, Kengeri Satellite Town, Bengaluru, Karnataka 560060</p>
+
+</div>
+
+</div>
+
+<div class="info-item">
+
+<div class="info-icon">📞</div>
+
+<div class="info-text">
+
+<h3>Phone</h3>
+
+<p>+91 8002337353</p>
+
+</div>
+
+</div>
+
+<div class="info-item">
+
+<div class="info-icon">📧</div>
+
+<div class="info-text">
+
+<h3>Email</h3>
+
+<p>info@getinkvision.org</p>
+
+</div>
+
+</div>
+
+<div class="info-item">
+
+<div class="info-icon">⏰</div>
+
+<div class="info-text">
+
+<h3>Working Hours</h3>
+
+<p>Monday - Saturday (9AM - 6PM)</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="contact-form">
+
+<h2>Send Message</h2>
+
+<form onsubmit="sendMessage(event)">
+
+<div class="input-box">
+
+<label>Full Name</label>
+
+<input type="text" placeholder="Enter your name" required>
+
+</div>
+
+<div class="input-box">
+
+<label>Email Address</label>
+
+<input type="email" placeholder="Enter your email" required>
+
+</div>
+
+<div class="input-box">
+
+<label>Phone Number</label>
+
+<div class="phone-group">
+
+<select>
+
+<option>+91</option>
+<option>+1</option>
+<option>+44</option>
+<option>+971</option>
+
+</select>
+
+<input type="tel" placeholder="Phone number" required>
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>Select Inquiry</label>
+
+<select>
+
+<option>Product Inquiry</option>
+<option>Service Booking</option>
+<option>Partnership</option>
+<option>Support</option>
+
+</select>
+
+</div>
+
+<div class="input-box">
+
+<label>Message</label>
+
+<textarea placeholder="Write your message..." required></textarea>
+
+</div>
+
+<button class="send-btn">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- MAP -->
+
+<div class="map-section">
+
+<h2>Our Location</h2>
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=1670/74,6th Main Rd,Kengeri Satellite Town,Bengaluru,Karnataka 560060&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Getinkvision</h3>
+
+<p>
+Professional hygiene products and cleaning solutions
+for homes and industries.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p>Home</p>
+<p>Products</p>
+<p>Services</p>
+<p>Contact</p>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📧 info@getinkvision.org</p>
+
+<p>📞 +91 8002337353</p>
+
+<p>📍 Getinkvision Manufacturing  & Distributors Co.
+GSTIN - 29ABCFG3285A1ZL
+Address - 1670/74, 6th Main Rd, Kengeri Satellite Town, Bengaluru, Karnataka 560060</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 Getinkvision | All Rights Reserved
+
+</div>
+
+</footer>
+
+<script>
+
+function sendMessage(event){
+
+event.preventDefault();
+
+alert("Message sent successfully!");
+
+}
+
+</script>
+
+</body>
+</html>

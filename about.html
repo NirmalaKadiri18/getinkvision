@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About - Getinkvision</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+background:linear-gradient(90deg,#1565c0,#1976d2);
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
+
+.logo-section{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-section img{
+width:55px;
+height:55px;
+background:white;
+padding:5px;
+border-radius:50%;
+object-fit:contain;
+}
+
+.logo-section h2{
+color:white;
+font-size:30px;
+font-weight:700;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+gap:15px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+padding:10px 16px;
+border-radius:8px;
+transition:0.3s;
+font-weight:500;
+}
+
+nav a:hover{
+background:rgba(255,255,255,0.2);
+}
+
+/* HERO */
+
+.hero{
+width:90%;
+margin:50px auto;
+background:white;
+border-radius:28px;
+padding:60px;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:50px;
+align-items:center;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+}
+
+.hero-text h1{
+font-size:58px;
+line-height:1.1;
+color:#1565c0;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+color:#555;
+margin-bottom:20px;
+}
+
+.hero img{
+width:100%;
+border-radius:22px;
+}
+
+/* ABOUT SECTION */
+
+.about-section{
+width:90%;
+margin:70px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.about-card{
+background:white;
+padding:35px;
+border-radius:24px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.about-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 28px rgba(0,0,0,0.12);
+}
+
+.about-card h2{
+font-size:28px;
+color:#1565c0;
+margin-bottom:18px;
+}
+
+.about-card p{
+font-size:16px;
+line-height:1.8;
+color:#666;
+}
+
+/* MISSION SECTION */
+
+.mission-section{
+width:90%;
+margin:80px auto;
+background:linear-gradient(90deg,#1565c0,#42a5f5);
+padding:60px;
+border-radius:30px;
+color:white;
+text-align:center;
+}
+
+.mission-section h2{
+font-size:48px;
+margin-bottom:25px;
+}
+
+.mission-section p{
+font-size:18px;
+line-height:1.9;
+max-width:900px;
+margin:auto;
+}
+
+/* STATS */
+
+.stats-section{
+width:90%;
+margin:80px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat-box{
+background:white;
+padding:40px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-5px);
+}
+
+.stat-box h1{
+font-size:52px;
+color:#1565c0;
+margin-bottom:12px;
+}
+
+.stat-box p{
+font-size:18px;
+color:#666;
+}
+
+/* TEAM */
+
+.team-section{
+width:90%;
+margin:90px auto;
+}
+
+.team-title{
+text-align:center;
+font-size:44px;
+color:#1565c0;
+margin-bottom:50px;
+}
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.team-card{
+background:white;
+padding:30px;
+border-radius:24px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.team-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 28px rgba(0,0,0,0.12);
+}
+
+.team-card img{
+width:120px;
+height:120px;
+object-fit:cover;
+border-radius:50%;
+margin-bottom:20px;
+}
+
+.team-card h3{
+font-size:24px;
+margin-bottom:8px;
+color:#1565c0;
+}
+
+.team-card p{
+color:#666;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:80px;
+background:#0d47a1;
+color:white;
+padding:50px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:35px;
+}
+
+.footer-grid h3{
+margin-bottom:18px;
+}
+
+.footer-grid p,
+.footer-grid a{
+color:#ddd;
+text-decoration:none;
+line-height:2;
+font-size:15px;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.2);
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:20px;
+padding:18px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+grid-template-columns:1fr;
+padding:35px;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.mission-section{
+padding:35px;
+}
+
+}
+
+@media(max-width:600px){
+
+.logo-section h2{
+font-size:22px;
+}
+
+.hero-text h1{
+font-size:34px;
+}
+
+.mission-section h2{
+font-size:34px;
+}
+
+.team-title{
+font-size:34px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-section">
+
+<img src="images/logo.png" alt="logo">
+
+<h2>GETINKVISION</h2>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒</a>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>About Getinkvision</h1>
+
+<p>
+Getinkvision is a modern hygiene and cleaning solutions company dedicated to delivering premium-quality products and professional services.
+</p>
+
+<p>
+We specialize in eco-friendly cleaning products, industrial hygiene solutions, worker booking services, and professional sanitation support for homes, offices, and industries.
+</p>
+
+<p>
+Our mission is to create cleaner, healthier, and safer environments through innovation and trusted quality.
+</p>
+
+</div>
+
+<img src="images/about.jpg" alt="about">
+
+</section>
+
+<!-- ABOUT CARDS -->
+
+<section class="about-section">
+
+<div class="about-card">
+
+<h2>🌿 Eco Friendly</h2>
+
+<p>
+We focus on environmentally safe cleaning products designed to reduce harmful impact while maintaining powerful cleaning performance.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h2>🧪 Trusted Quality</h2>
+
+<p>
+All our products are carefully tested and designed to meet professional hygiene and safety standards.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h2>⚡ Fast Services</h2>
+
+<p>
+From worker booking to sanitation support, we provide quick and reliable services for every customer.
+</p>
+
+</div>
+
+</section>
+
+<!-- MISSION -->
+
+<section class="mission-section">
+
+<h2>Our Mission</h2>
+
+<p>
+To provide affordable, sustainable, and innovative hygiene solutions while ensuring customer satisfaction, environmental responsibility, and long-term trust.
+</p>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats-section">
+
+<div class="stat-box">
+
+<h1>10K+</h1>
+
+<p>Happy Customers</p>
+
+</div>
+
+<div class="stat-box">
+
+<h1>500+</h1>
+
+<p>Products Delivered</p>
+
+</div>
+
+<div class="stat-box">
+
+<h1>100+</h1>
+
+<p>Professional Workers</p>
+
+</div>
+
+<div class="stat-box">
+
+<h1>24/7</h1>
+
+<p>Customer Support</p>
+
+</div>
+
+</section>
+
+<!-- TEAM -->
+
+<section class="team-section">
+
+<h1 class="team-title">Our Team</h1>
+
+<div class="team-grid">
+
+<div class="team-card">
+
+    <img src="images/team1.jpg" alt="Moksha Matta UT">
+
+    <h3>Moksha Matta UT</h3>
+
+    <p>Founder & CEO of GETINKVISION</p>
+
+    <p>(Aeronautical Engineer)</p>
+
+</div>
+
+<div class="team-card">
+
+    <img src="images/team2.jpg" alt="Kavyashree UT">
+
+    <h3>Kavyashree UT</h3>
+
+    <p>Managing Director of GETINKVISION</p>
+
+    <p>HR (10+ Years Experience)</p>
+
+    <p>Alumni of Trichy IIM</p>
+
+</div>
+
+<div class="team-card">
+
+    <img src="images/team3.jpg" alt="Nandan Kumar S">
+
+    <h3>Nandan Kumar S</h3>
+
+    <p>Co-Founder & COO of GETINKVISION</p>
+
+    <p>(Aeronautical Engineer)</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Getinkvision</h3>
+
+<p>
+Professional hygiene products and cleaning solutions for homes and industries.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p>Home</p>
+<p>Products</p>
+<p>Services</p>
+<p>Contact</p>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📧 info@getinkvision.org</p>
+
+<p>📞 +91 8002337353</p>
+
+<p>📍 Getinkvision Manufacturing  & Distributors Co.
+GSTIN - 29ABCFG3285A1ZL
+Address - 1670/74, 6th Main Rd, Kengeri Satellite Town, Bengaluru, Karnataka 560060</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 Getinkvision | All Rights Reserved
+
+</div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services - Getinkvision</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+background:linear-gradient(90deg,#1565c0,#1976d2);
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
+
+.logo-section{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-section img{
+width:55px;
+height:55px;
+background:white;
+padding:5px;
+border-radius:50%;
+object-fit:contain;
+}
+
+.logo-section h2{
+color:white;
+font-size:30px;
+font-weight:700;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+gap:15px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+padding:10px 16px;
+border-radius:8px;
+transition:0.3s;
+font-weight:500;
+}
+
+nav a:hover{
+background:rgba(255,255,255,0.2);
+}
+
+/* HERO */
+
+.hero{
+width:90%;
+margin:50px auto;
+background:white;
+border-radius:28px;
+padding:60px;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:50px;
+align-items:center;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+}
+
+.hero-text h1{
+font-size:58px;
+line-height:1.1;
+color:#1565c0;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+color:#555;
+margin-bottom:25px;
+}
+
+.hero img{
+width:100%;
+border-radius:20px;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+font-size:42px;
+color:#1565c0;
+margin-top:20px;
+margin-bottom:45px;
+font-weight:700;
+}
+
+/* SERVICES GRID */
+
+.services-grid{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+/* SERVICE CARD */
+
+.service-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 4px 18px rgba(0,0,0,0.06);
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 25px rgba(0,0,0,0.12);
+}
+
+.service-icon{
+font-size:45px;
+margin-bottom:20px;
+}
+
+.service-card h3{
+font-size:25px;
+margin-bottom:15px;
+color:#1565c0;
+}
+
+.service-card p{
+font-size:16px;
+line-height:1.8;
+color:#666;
+margin-bottom:25px;
+}
+
+.service-card button{
+padding:12px 22px;
+background:#1565c0;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+.service-card button:hover{
+background:#0d47a1;
+}
+
+/* WHY CHOOSE */
+
+.why-section{
+width:90%;
+margin:80px auto;
+background:white;
+padding:50px;
+border-radius:25px;
+box-shadow:0 5px 25px rgba(0,0,0,0.08);
+}
+
+.why-section h2{
+font-size:40px;
+color:#1565c0;
+margin-bottom:40px;
+text-align:center;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.feature-box{
+background:#f5f8ff;
+padding:30px;
+border-radius:18px;
+transition:0.3s;
+}
+
+.feature-box:hover{
+transform:translateY(-5px);
+}
+
+.feature-box h3{
+color:#1565c0;
+margin-bottom:15px;
+font-size:24px;
+}
+
+.feature-box p{
+line-height:1.8;
+color:#555;
+}
+
+/* CTA */
+
+.cta-section{
+width:90%;
+margin:70px auto;
+background:linear-gradient(90deg,#1565c0,#42a5f5);
+padding:60px;
+border-radius:28px;
+text-align:center;
+color:white;
+}
+
+.cta-section h2{
+font-size:46px;
+margin-bottom:20px;
+}
+
+.cta-section p{
+font-size:18px;
+line-height:1.8;
+max-width:800px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.cta-btn{
+padding:15px 35px;
+background:white;
+color:#1565c0;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-2px);
+}
+
+/* FOOTER */
+
+footer{
+margin-top:80px;
+background:#0d47a1;
+color:white;
+padding:50px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:35px;
+}
+
+.footer-grid h3{
+margin-bottom:18px;
+}
+
+.footer-grid p,
+.footer-grid a{
+color:#ddd;
+text-decoration:none;
+line-height:2;
+font-size:15px;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.2);
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:20px;
+padding:18px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+grid-template-columns:1fr;
+padding:35px;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-text h1{
+font-size:34px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+.why-section,
+.cta-section{
+padding:30px;
+}
+
+.logo-section h2{
+font-size:22px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-section">
+
+<img src="images/logo.png" alt="logo">
+
+<h2>GETINKVISION</h2>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-text">
+        <h1>Professional Cleaning & Hygiene Services</h1>
+
+        <p>
+            Getinkvision provides reliable cleaning, hygiene,
+            sanitation, and worker support services for homes,
+            offices, apartments, and industries.
+        </p>
+
+        <p>
+            Our trained professionals ensure high-quality service,
+            eco-friendly solutions, and customer satisfaction.
+        </p>
+    </div>
+
+    <div class="hero-image">
+        <img src="images/services.jpg" alt="services">
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">🧼</div>
+
+<h3>Home Cleaning</h3>
+
+<p>
+Deep cleaning solutions for apartments, villas,
+and residential spaces with premium hygiene care.
+</p>
+
+<button onclick="window.location.href='contact.html'">
+Book Service
+</button>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🏢</div>
+
+<h3>Office Cleaning</h3>
+
+<p>
+Professional workplace sanitation and maintenance
+services for businesses and commercial buildings.
+</p>
+
+<button onclick="window.location.href='contact.html'">
+Book Service
+</button>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🚚</div>
+
+<h3>House Shifting</h3>
+
+<p>
+Safe and secure packing, moving, and transportation
+services with experienced workers.
+</p>
+
+<button onclick="window.location.href='contact.html'">
+Book Service
+</button>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">👷</div>
+
+<h3>Worker Booking</h3>
+
+<p>
+Book trained workers for cleaning, sanitation,
+maintenance, and support services anytime.
+</p>
+
+<button onclick="window.location.href='contact.html'">
+Book Service
+</button>
+
+</div>
+
+</div>
+
+<!-- WHY CHOOSE US -->
+
+<div class="why-section">
+
+<h2>Why Choose Getinkvision?</h2>
+
+<div class="features">
+
+<div class="feature-box">
+
+<h3>✔ Trusted Professionals</h3>
+
+<p>
+Experienced and trained staff delivering reliable service.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>🌿 Eco-Friendly</h3>
+
+<p>
+Safe and environmentally responsible cleaning methods.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>⚡ Fast Service</h3>
+
+<p>
+Quick response and efficient service management.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>💰 Affordable Pricing</h3>
+
+<p>
+Premium quality services at competitive prices.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CTA -->
+
+<div class="cta-section">
+
+<h2>Need Professional Service?</h2>
+
+<p>
+Contact our team today and get premium cleaning,
+hygiene, and maintenance solutions for your home
+or business.
+</p>
+
+<button class="cta-btn" onclick="window.location.href='contact.html'">
+
+Contact Us
+
+</button>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Getinkvision</h3>
+
+<p>
+Professional hygiene products and cleaning solutions
+for homes and industries.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p>Home</p>
+<p>Products</p>
+<p>Services</p>
+<p>Contact</p>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📧 info@getinkvision.org</p>
+
+<p>📞 +91 8002337353</p>
+
+<p>📍 Getinkvision Manufacturing  & Distributors Co.
+GSTIN - 29ABCFG3285A1ZL
+Address - 1670/74, 6th Main Rd, Kengeri Satellite Town, Bengaluru, Karnataka 560060</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 Getinkvision | All Rights Reserved
+
+</div>
+
+</footer>
+
+</body>
+</html>

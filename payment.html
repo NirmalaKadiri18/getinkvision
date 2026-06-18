@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment - Getinkvision</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+background:linear-gradient(90deg,#1565c0,#1976d2);
+box-shadow:0 3px 15px rgba(0,0,0,0.1);
+}
+
+.logo-section{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-section img{
+width:55px;
+height:55px;
+background:white;
+padding:5px;
+border-radius:50%;
+}
+
+.logo-section h2{
+color:white;
+font-size:30px;
+font-weight:700;
+}
+
+nav{
+display:flex;
+gap:15px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+padding:10px 16px;
+border-radius:8px;
+transition:0.3s;
+font-weight:500;
+}
+
+nav a:hover{
+background:rgba(255,255,255,0.2);
+}
+
+/* CONTAINER */
+
+.container{
+width:90%;
+max-width:1200px;
+margin:50px auto;
+}
+
+/* PAYMENT BOX */
+
+.payment-wrapper{
+display:grid;
+grid-template-columns:1fr 400px;
+gap:40px;
+}
+
+/* LEFT */
+
+.payment-box{
+background:white;
+padding:40px;
+border-radius:24px;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+}
+
+.payment-box h1{
+font-size:42px;
+color:#1565c0;
+margin-bottom:15px;
+}
+
+.payment-box p{
+color:#666;
+margin-bottom:35px;
+font-size:17px;
+}
+
+/* PAYMENT OPTIONS */
+
+.payment-option{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 25px;
+background:#f7f9fc;
+border:2px solid transparent;
+border-radius:16px;
+margin-bottom:20px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.payment-option:hover{
+border-color:#1565c0;
+transform:translateY(-3px);
+}
+
+.payment-left{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.payment-icon{
+font-size:28px;
+}
+
+.payment-option h3{
+font-size:20px;
+margin-bottom:4px;
+}
+
+.payment-option p{
+margin:0;
+font-size:14px;
+color:#777;
+}
+
+.select-btn{
+padding:10px 20px;
+background:#1565c0;
+border:none;
+color:white;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.select-btn:hover{
+background:#0d47a1;
+}
+
+/* RIGHT SIDE */
+
+.summary-box{
+background:white;
+padding:35px;
+border-radius:24px;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+height:fit-content;
+}
+
+.summary-box h2{
+font-size:30px;
+color:#1565c0;
+margin-bottom:25px;
+}
+
+.summary-item{
+display:flex;
+justify-content:space-between;
+margin-bottom:18px;
+font-size:17px;
+}
+
+.total{
+margin-top:25px;
+padding-top:20px;
+border-top:2px solid #eee;
+display:flex;
+justify-content:space-between;
+font-size:26px;
+font-weight:700;
+color:#1565c0;
+}
+
+/* QR BOX */
+
+.qr-box{
+margin-top:35px;
+text-align:center;
+background:#f7f9fc;
+padding:25px;
+border-radius:18px;
+}
+
+.qr-box img{
+width:220px;
+border-radius:14px;
+margin-bottom:15px;
+}
+
+.qr-box p{
+color:#555;
+font-size:15px;
+}
+
+/* BUTTON */
+
+.pay-btn{
+width:100%;
+margin-top:30px;
+padding:16px;
+background:linear-gradient(90deg,#1565c0,#42a5f5);
+border:none;
+border-radius:12px;
+color:white;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.pay-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(21,101,192,0.25);
+}
+
+/* DELIVERY FORM */
+
+input,
+textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+}
+
+textarea{
+resize:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.payment-wrapper{
+grid-template-columns:1fr;
+}
+
+header{
+flex-direction:column;
+gap:20px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-section">
+
+<img src="images/logo.png" alt="logo">
+
+<h2>GETINKVISION</h2>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒</a>
+
+</nav>
+
+</header>
+
+<!-- MAIN -->
+
+<div class="container">
+
+<div class="payment-wrapper">
+
+<!-- LEFT -->
+
+<div class="payment-box">
+
+<h1>Choose Payment Method</h1>
+
+<p>
+Secure and fast payment options for your orders and service bookings.
+</p>
+
+<div id="selectedPaymentBox"></div>
+<div id="cardDetails" style="display:none; margin-top:20px;">
+
+<input
+type="text"
+id="cardNumber"
+placeholder="Card Number">
+
+<input
+type="text"
+id="cardName"
+placeholder="Card Holder Name">
+
+<input
+type="text"
+id="expiry"
+placeholder="MM/YY">
+
+<input
+type="text"
+id="cvv"
+placeholder="CVV">
+
+</div>
+
+<div class="payment-option">
+<div class="payment-left">
+<div class="payment-icon">✅</div>
+<div>
+<h3 id="paymentTitle">Loading...</h3>
+<p>Selected in Checkout</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<button class="pay-btn" onclick="submitOrder()">
+Proceed to Payment
+</button>
+
+</div>
+
+<!-- QR -->
+
+<div class="qr-box">
+
+<img src="images/qr.png" alt="QR Code">
+
+<p>
+Scan QR using any UPI app to complete payment
+</p>
+
+</div>
+
+<button class="pay-btn" onclick="submitOrder()">
+Proceed to Payment
+</button>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="summary-box">
+
+<h2>Order Summary</h2>
+
+<div id="summaryItems"></div>
+
+<div class="total">
+<span>Total</span>
+<span id="finalTotal">₹0</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let selectedPayment =
+localStorage.getItem("paymentMethod") || "";
+
+function pay(type){
+
+selectedPayment = type;
+
+alert("Selected Payment Method: " + type);
+
+}
+
+function showPaymentMethod(){
+
+const paymentMethod =
+localStorage.getItem("paymentMethod") || "Not Selected";
+
+const title =
+document.getElementById("paymentTitle");
+
+if(title){
+title.innerText = paymentMethod;
+}
+
+if(paymentMethod !== "QR Payment"){
+
+const qrBox =
+document.querySelector(".qr-box");
+
+if(qrBox){
+qrBox.style.display = "none";
+}
+
+if(paymentMethod === "Card Payment"){
+
+const cardBox =
+document.getElementById("cardDetails");
+
+if(cardBox){
+cardBox.style.display = "block";
+}
+
+}
+
+}
+
+}
+
+function loadSummary(){
+
+const cart =
+JSON.parse(localStorage.getItem("cart")) || [];
+
+const summaryItems =
+document.getElementById("summaryItems");
+
+const finalTotal =
+document.getElementById("finalTotal");
+
+let subtotal = 0;
+
+summaryItems.innerHTML = "";
+
+cart.forEach(item=>{
+
+subtotal += item.price * item.qty;
+
+summaryItems.innerHTML += `
+<div class="summary-item">
+<span>${item.name} x ${item.qty}</span>
+<span>₹${item.price * item.qty}</span>
+</div>
+`;
+
+});
+
+const delivery = 40;
+const gst = 30;
+
+summaryItems.innerHTML += `
+<div class="summary-item">
+<span>Delivery</span>
+<span>₹${delivery}</span>
+</div>
+
+<div class="summary-item">
+<span>GST</span>
+<span>₹${gst}</span>
+</div>
+`;
+
+finalTotal.innerText =
+`₹${subtotal + delivery + gst}`;
+
+}
+
+async function submitOrder(){
+
+if(selectedPayment === ""){
+
+alert("Please select a payment method");
+return;
+
+}
+
+const fullName = localStorage.getItem("fullName");
+const email = localStorage.getItem("email");
+const phone = localStorage.getItem("phone");
+const address = localStorage.getItem("address");
+const city = localStorage.getItem("city");
+const pincode = localStorage.getItem("pincode");
+
+try{
+
+const response = await fetch(
+"http://localhost:3000/send-order",
+{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+fullName,
+email,
+phone,
+address,
+city,
+pincode,
+paymentMethod:selectedPayment
+})
+}
+);
+
+const data = await response.json();
+
+if(data.success){
+
+alert(
+"🎉 Order Placed Successfully!\n\nExpected Delivery: 3-5 Working Days"
+);
+
+localStorage.removeItem("cart");
+
+window.location.href="success.html";
+
+}else{
+
+alert("Failed to place order");
+
+}
+
+}catch(error){
+
+console.error(error);
+alert("Server connection failed");
+
+}
+
+}
+
+showPaymentMethod();
+loadSummary();
+
+</script>
+
+</body>
+</html>
