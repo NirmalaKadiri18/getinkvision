@@ -127,7 +127,6 @@ app.post("/send-order", async (req, res) => {
         paymentMethod
     } = req.body;
 
-    ...
 });
 
     const mailOptions = {
