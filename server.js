@@ -127,8 +127,6 @@ app.post("/send-order", async (req, res) => {
         paymentMethod
     } = req.body;
 
-});
-
     const mailOptions = {
         from: "getinkvision1@gmail.com",
         to: "getinkvision1@gmail.com",
