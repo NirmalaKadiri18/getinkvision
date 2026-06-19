@@ -524,8 +524,7 @@ const pincode = localStorage.getItem("pincode");
 
 try {
 
-   const response = await fetch(
-"https://getinkvision.onrender.com/send-order",
+   const response = await fetch("/send-order",
 {
     method:"POST",
     headers:{
