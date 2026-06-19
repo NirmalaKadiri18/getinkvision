@@ -115,6 +115,9 @@ app.post("/verify-otp", (req, res) => {
 
 app.post("/send-order", async (req, res) => {
 
+    console.log("===== SEND ORDER CALLED =====");
+    console.log(req.body);
+
     const {
         fullName,
         email,
