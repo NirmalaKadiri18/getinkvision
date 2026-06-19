@@ -115,8 +115,7 @@ app.post("/verify-otp", (req, res) => {
 
 app.post("/send-order", async (req, res) => {
 
-    console.log("===== SEND ORDER CALLED =====");
-    console.log(req.body);
+    console.log("===== SEND ORDER ROUTE HIT =====");
 
     const {
         fullName,
@@ -127,6 +126,9 @@ app.post("/send-order", async (req, res) => {
         pincode,
         paymentMethod
     } = req.body;
+
+    ...
+});
 
     const mailOptions = {
         from: "getinkvision1@gmail.com",
